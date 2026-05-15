@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - prBranch
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
@@ -31,6 +32,7 @@ jobs:
           app_location: "src" # App source code path
           api_location: "api" # Api source code path - optional
           output_location: "" # Built app content directory - optional
+          production_branch: "main"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
